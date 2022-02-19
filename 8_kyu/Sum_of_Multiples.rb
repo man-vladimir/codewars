@@ -4,3 +4,4 @@ def sum_mul(n, m)
   return "INVALID" if n <= 0 || m <= 0 || m < n
   (n...m).to_a.select {|i| i if  i % n == 0 }.inject(:+)      
 end
+
