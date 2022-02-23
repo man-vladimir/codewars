@@ -6,9 +6,9 @@ def remainder(a, b)     # First variant solution
   max.abs % min.abs         
 end
   
-def remainder(a, b)  # second variant solution
-  return nil if a == 0 || b == 0
+def remainder(a, b)  # second variant solution  
   case
+    when [a, b].any?(&:zero?) then nil
     when a >= b then a.abs % b.abs
     when a <= b then b.abs % a.abs
   end
