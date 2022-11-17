@@ -13,3 +13,15 @@ def braces_status(string)
   stack.empty?
 end
 
+# refactor variant
+
+def braces_status(string)
+  braces, stack = {'('=>')', '['=>']', '{'=>'}'}, []
+  string.each_char do |char|
+    case char
+      when '(', '[', '{' then stack << char
+      when ')', ']', '}' then return false if stack.pop != braces.key(char)
+    end
+  end
+  stack.empty?
+end
