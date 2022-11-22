@@ -11,7 +11,7 @@ end
 
 class String
   def toJadenCase
-    gsub(/\b[a-z]/, &:upcase)
+    gsub(/(\s|^)\w/, &:upcase)
   end
 end
 
