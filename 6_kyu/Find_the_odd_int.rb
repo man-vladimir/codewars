@@ -8,6 +8,6 @@ end
 
 # variant two
 def find_it(seq)
-  seq. find { |el| seq.count(el).odd? }
+  seq.find { |el| seq.count(el).odd? }
 end
 
